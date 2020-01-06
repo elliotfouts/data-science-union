@@ -1,14 +1,15 @@
 html {
     scroll-behavior: smooth;
     padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 body {
-    box-sizing: border-box;
     background: #111;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,7 +21,7 @@ body {
 
 header {
     background: #111;
-    width: 100vw;
+    width: 100%;
 }
 
 .header-container {
@@ -112,7 +113,7 @@ header input:focus {
 
 .main-showcase {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background: #333;
     display: flex;
     justify-content: center;
@@ -120,8 +121,8 @@ header input:focus {
 }
 
 .main-showcase-container {
-    height: 96%;
-    width: 96vw;
+    height: 95%;
+    width: 95%;
     flex-grow: 0;
     display: flex;
     justify-content: center;
@@ -129,7 +130,7 @@ header input:focus {
     background: url('img/main-showcase.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }
 
 .main-showcase-container h1 {
@@ -153,9 +154,9 @@ header input:focus {
     background: url('img/main-content.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 96%;
-    width: 96vw;
+    /* background-attachment: fixed; */
+    height: 95%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,7 +165,7 @@ header input:focus {
 .main-content {
     width: 60%;
     height: 60%;
-    padding: 5rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -174,13 +175,13 @@ header input:focus {
 
 .main-content h2 {
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .main-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    line-height: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
 }
 
 .main-content a {
@@ -230,28 +231,29 @@ header input:focus {
     width: 80%;
     padding-top: 6rem;
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
 }
 
 .column {
     height: 100%;
     margin: 2rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    transition: padding 300ms;
+    transition: all 300ms;
 }
 
 .column:hover {
-    padding: 3rem;
+    transform: scale(1.1);
 }
 
 .column h3 {
     font-size: 3rem;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .column p {
@@ -265,20 +267,14 @@ header input:focus {
     text-decoration: none;
     text-align: center;
     position: relative;
+    padding: 1rem .5rem;
+    border: 1px #fff solid;
+    transition: all 300ms;
 }
 
-.column a::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 0%;
-    margin: 0 auto;
+.column a:hover {
     background: #fff;
-    transition: width 300ms;
-}
-
-.column a:hover::after {
-    width: 45%;
+    color: #111;
 }
 
 footer {
@@ -300,3 +296,8 @@ footer .fab:hover {
 footer p {
     padding: .5rem;
 }
+
+/*=====================================
+*            media queries            *
+=====================================*/
+
